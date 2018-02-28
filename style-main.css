@@ -187,6 +187,10 @@ ul, ol {
 	padding: 0;
 }
 
+nav li::before{
+	content: "—";
+}
+
 /* header section */
 
 header {
@@ -204,18 +208,14 @@ header h1 {
 		margin: 3em auto 2em;
 }
 
-#mainNav ul {
+header ul {
 	display: flex;
 	justify-content: center;
 	font-weight: 600;
 }
 
-#mainNav li:not(:last-child) {
+header li:not(:last-child) {
 	padding-right: 1em;
-}
-
-nav li::before{
-	content: "—";
 }
 
 .site-title {
@@ -351,16 +351,16 @@ CSS Grid layout for modern browsers:
 			z-index: -100;
 		}
 
-		#mainNav {
+		header nav {
 			right: 4em;
 			top: 6em;
 		}
 
-		#mainNav ul {
+		header ul {
 			font-size: 0.8em;
 			justify-content: right;
 		}
-		#mainNav ul a {
+		header a {
 			background: #D6D6CB;
 		}
 
