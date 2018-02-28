@@ -42,6 +42,11 @@ body {
 	background-color: #D6D6CB;
 }
 
+::selection {
+	background: #000;
+	color: #D6D6CB;
+}
+
 body,
 button,
 input,
@@ -59,10 +64,6 @@ h4,
 h5,
 h6 {
 	clear: both;
-}
-
-p {
-	margin-bottom: 1.5em;
 }
 
 b,
@@ -163,7 +164,6 @@ h6 {
 
 p {
 	margin: 0;
-	padding: 1em 0;
 }
 
 a {
@@ -205,9 +205,7 @@ header h1 {
 	z-index: 200;
 }
 
-header h1 {
-	font-weight: bolder;
-}
+
 
 .logo {
 		width: 30vw;
@@ -234,17 +232,17 @@ header li:not(:last-child) {
 
 /* post section */
 
-.post h2,
-.post h3 {
-	font-weight: 600;
-	line-height: 3em;
-}
 
 .post h2 {
-	font-size: 1.25em;
+	font-size: 1.6em;
+	font-weight: 600;
+	line-height: 6em;
+
 }
 .post h3 {
 	font-size: 1em;
+	font-weight: 600;
+	padding-bottom: 1.5em;
 }
 
 .post h3::before {
@@ -338,7 +336,7 @@ CSS Grid layout for modern browsers:
 		/* Disable fallback max-width center aligned rule: */
 		.site {
 			max-width: 1280px;
-			padding: 4em;
+			padding: 3em 4em 4em;
 		}
 
 		/* fixed header */
@@ -371,37 +369,48 @@ CSS Grid layout for modern browsers:
 			font-size: 0.8em;
 			justify-content: flex-end;
 		}
-		header a {
+	/*	header a {
 			background: #D6D6CB;
 		}
-
+	*/
 		.site-title {
 			text-align: right;
 			font-size: 4em;
-			background: #D6D6CB;
 			line-height: 0.4em;
 			margin-top: 0.6em;
+			font-weight: 500;
+
 		}
+
 		.divider {
 			width: calc(100vw - 8em);
 			border-top: 2px solid #000;
 		}
+		.divider2 {
+			position: fixed;
+			background: #D6D6CB;
+			top: 0;
+			left: 0;
+			height: 3em;
+			width: 100vw;
+		}
+
+		.main-area{
+						padding: 2em 0;
+			background-color: #D6D6CB;
+		}
 
 		/* post1 */
-
-		.two_columns {
-			column-count: 2;
-			column-gap: 2em;
-		}
 
 		.sciGrid {
 			display: grid;
 			grid-template-columns: repeat(6, 1fr);
 			grid-column-gap: 2em;
+			grid-row-gap: 2em;
 		}
 
 		.sciGrid img{
-			padding: 0 0 4em;
+			/*padding: 0 0 4em;*/
 			margin: 0;
 			z-index: 100;
 		}
