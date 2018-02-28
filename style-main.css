@@ -358,7 +358,7 @@ CSS Grid layout for modern browsers:
 
 		header ul {
 			font-size: 0.8em;
-			justify-content: right;
+			justify-content: flex-end;
 		}
 		header a {
 			background: #D6D6CB;
