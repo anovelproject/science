@@ -1,0 +1,408 @@
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+
+body {
+	padding: 1.4em;
+	background-color: #D6D6CB;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+    display: inline-block;
+    font-family: Courier, monospace;
+    color: #ddca7e;
+    background: #282c34;
+		padding: .5em .8em;
+    border-radius: .2em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font: 15px Courier, monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+iframe {
+	border: 0;
+	height: 80vh;
+	z-index: 99;
+}
+
+/*--------------------------------------------------------------
+General styling
+--------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+p {
+	margin: 0;
+	padding: 1em 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	background: #000 !important;
+	color: #fff !important;
+	transition: all .2s;
+}
+
+img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+ul, ol {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* header section */
+
+header {
+		border-top: 2px solid #000;
+}
+
+header nav,
+header h1 {
+	z-index: 200;
+}
+
+.logo {
+		width: 30vw;
+		max-width: 300px;
+		margin: 3em auto 2em;
+}
+
+#mainNav ul {
+	display: flex;
+	justify-content: center;
+	font-weight: 600;
+}
+
+#mainNav li:not(:last-child) {
+	padding-right: 1em;
+}
+
+nav li::before{
+	content: "—";
+}
+
+.site-title {
+	font-size: 2.8em;
+	text-align: center;
+	margin: 0.3em 0;
+}
+
+
+/* post section */
+
+.post h2,
+.post h3 {
+	font-weight: 600;
+	line-height: 3em;
+}
+
+.post h2 {
+	font-size: 1.25em;
+}
+.post h3 {
+	font-size: 1em;
+}
+
+.post h3::before {
+	content: "—";
+}
+
+.postSection {
+	margin-bottom: 2em;
+}
+
+/* Colophon section */
+
+footer {
+	border-top: 2px solid #000;
+	margin: 4em 0 2em;
+}
+
+.footerHead {
+	margin: 2em auto 0;
+	display: flex;
+	justify-content:space-around;
+	max-width: 300px;
+}
+
+.footerHead img {
+	width: 30vw;
+	max-width: 140px;
+}
+
+.footerHead nav ul{
+	height: 100%;
+	font-weight: 600;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.footerCaption {
+	font-size: 0.7em;
+	padding: 2.4em 0;
+	max-width: 640px;
+	text-align: center;
+	margin: auto;
+}
+
+.iconList {
+	display: flex;
+	justify-content: center;
+}
+
+.iconList li:not(:first-child) {
+	margin-left: 0.4em;
+}
+
+.footerIcon {
+	width: 1.2em;
+}
+
+/*--------------------------------------------------------------
+About page:
+--------------------------------------------------------------*/
+
+#labMark {
+	width: 10em;
+	margin: 4em 0;
+}
+
+/*--------------------------------------------------------------
+Basic responsive layout for all browsers:
+--------------------------------------------------------------*/
+
+.site {
+	max-width: 45em;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+CSS Grid layout for modern browsers:
+--------------------------------------------------------------*/
+
+/* Check for CSS Grid support: */
+@supports (grid-area: auto) {
+
+	/* Enable grid for viewports 640px and wider: */
+	@media screen and (min-width: 640px) {
+
+		/* Disable fallback max-width center aligned rule: */
+		.site {
+			max-width: 1280px;
+			padding: 4em;
+		}
+
+		/* fixed header */
+
+		header {
+			width: 100%;
+			padding-bottom: 200px;
+			border-top: none;
+		}
+
+		header > * {
+			margin: 0;
+			padding: 0;
+			position: fixed;
+		}
+
+		.logo {
+			width: 160px;
+			top: 3em;
+			left: 4em;
+			z-index: -100;
+		}
+
+		#mainNav {
+			right: 4em;
+			top: 6em;
+		}
+
+		#mainNav ul {
+			font-size: 0.8em;
+			justify-content: right;
+		}
+		#mainNav ul a {
+			background: #D6D6CB;
+		}
+
+		.site-title {
+			text-align: right;
+			font-size: 4em;
+			background: #D6D6CB;
+			line-height: 0.4em;
+			margin-top: 0.6em;
+		}
+		.divider {
+			width: calc(100vw - 8em);
+			border-top: 2px solid #000;
+		}
+
+		/* post1 */
+
+		.two_columns {
+			column-count: 2;
+			column-gap: 2em;
+		}
+
+		.sciGrid {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			grid-column-gap: 2em;
+		}
+
+		.sciGrid img{
+			padding: 0 0 4em;
+			margin: 0;
+			z-index: 100;
+		}
+
+		.sciSpanH6 { grid-column: 6 span; }
+		.sciSpanH5 { grid-column: 5 span; }
+		.sciSpanH4 { grid-column: 4 span; }
+		.sciSpanH3 { grid-column: 3 span; }
+		.sciSpanH2 { grid-column: 2 span; }
+
+		.sciSpanV3 { grid-row: 3 span; }
+		.sciSpanV2 { grid-row: 2 span; }
+
+	}
+
+}
