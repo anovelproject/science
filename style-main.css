@@ -389,7 +389,6 @@ CSS Grid layout for modern browsers:
 		.sciGrid img{
 			/*padding: 0 0 4em;*/
 			margin: 0;
-			z-index: 100;
 		}
 
 		.sciSpanH6 { grid-column: 6 span; }
