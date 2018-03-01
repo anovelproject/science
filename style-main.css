@@ -334,7 +334,7 @@ CSS Grid layout for modern browsers:
 		/* Disable fallback max-width center aligned rule: */
 		.site {
 			max-width: 1280px;
-			padding: 3em 4em 4em;
+			padding: 2em 4em 4em;
 		}
 
 		/* fixed header */
@@ -350,20 +350,21 @@ CSS Grid layout for modern browsers:
 			left: 4em;
 			z-index: 100;
 		}
-		#lockup{
-			top: .7em;
-		}
 
+		#lockup {
+			top: 0;
+		}
 		#lockup2 {
-			margin: 2em auto 1em;
+			margin: 1.5em auto 1em;
 			position: fixed;
-			top: -0.2em;
+			top: 0.2em;
 			visibility: visible;
 			opacity: 0;
 			width: 24em;
 		}
 
 		#menu {
+			/* background-color: red; */
 			margin: -4em 0 0;
 			padding: 2.5em 0 2em;
 			font-size: 0.8em;

@@ -6,10 +6,6 @@ $(function(){
       let alpha2 = (dist/70-1).clamp(0, 1);
       $("#lockup").css("opacity", alpha);
       $("#lockup2").css("opacity", alpha2);
-
-
-      console.log(alpha);
-
   });
 
 });
