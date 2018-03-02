@@ -2,6 +2,8 @@
 
 :root {
 	--sciColMain: #D6D6CB;
+	--phoneMargin: 1.4em;
+	--textInterval: 2.8em;
 }
 
 /*--------------------------------------------------------------
@@ -42,7 +44,7 @@ Typography
 --------------------------------------------------------------*/
 
 body {
-	padding: 1.4em;
+	padding: var(--phoneMargin);
 	background-color: var(--sciColMain);
 }
 
@@ -145,9 +147,17 @@ big {
 
 iframe {
 	border: 0;
+}
+
+.sciSketch {
 	width: 100%;
-	height: 80vh;
-	max-height: 1280px;
+	height: auto;
+	min-height: 360px;
+}
+
+.sciVideo {
+	width: calc(100vw - var(--phoneMargin) * 2);
+	height: calc((100vw - var(--phoneMargin) * 2) * 9 / 16);
 }
 
 /*--------------------------------------------------------------
@@ -167,6 +177,7 @@ h6 {
 
 p {
 	margin: 0;
+	padding: 0;
 }
 
 a {
@@ -206,9 +217,9 @@ header img{
 }
 
 #menu {
-	padding: 1.5em 0 1em;
-	margin-bottom: 3em;
 	top: -0.5em;
+	padding: 1.5em 0 1em;
+	margin-bottom: var(--textInterval);
 	position: sticky;
 	border-bottom: 2px solid #000;
 	background: var(--sciColMain);
@@ -231,31 +242,37 @@ header img{
 
 /* post section */
 
+.post {
+	margin-bottom: 2em;
+}
+
+/* default typography */
 
 .post h2 {
 	font-size: 1.6em;
 	font-weight: 600;
-	padding: 0 0 2em;
-
+	margin-bottom: calc(var(--textInterval) / 2);
 }
+
 .post h3 {
 	font-size: 1em;
 	font-weight: 600;
-	padding-bottom: 1.5em;
+	margin-top:  var(--textInterval);
+	padding-bottom: var(--textInterval);
 }
 
 .post h3::before {
 	content: "—";
 }
 
-.postSection {
-	margin-bottom: 2em;
+.post p {
+	margin-bottom: calc(var(--textInterval) / 2);
 }
 
 /* Colophon section */
 
 footer {
-	margin: 4em 0 2em;
+	margin: 2em 0;
 }
 
 .footerHead {
@@ -285,7 +302,7 @@ footer nav li{
 .footerCaption {
 	font-size: 0.7em;
 	padding: 0 0 2.4em;
-	max-width: 640px;
+	max-width: 680px;
 	text-align: center;
 	margin: auto;
 }
@@ -307,9 +324,13 @@ footer nav li{
 About page:
 --------------------------------------------------------------*/
 
-#labMark {
-	width: 10em;
-	margin: 4em 0;
+.aboutNovel img{
+	margin-bottom: var(--textInterval);
+}
+
+.sponserImg {
+	width: 80%;
+	margin: auto;
 }
 
 /*--------------------------------------------------------------
@@ -328,8 +349,8 @@ CSS Grid layout for modern browsers:
 /* Check for CSS Grid support: */
 @supports (grid-area: auto) {
 
-	/* Enable grid for viewports 640px and wider: */
-	@media screen and (min-width: 640px) {
+	/* Enable grid for viewports 720px and wider: */
+	@media screen and (min-width: 720px) {
 
 		/* Disable fallback max-width center aligned rule: */
 		.site {
@@ -338,12 +359,10 @@ CSS Grid layout for modern browsers:
 		}
 
 		/* fixed header */
-
 		header {
 			width: 100%;
 			height: 4em;
 		}
-
 		header img {
 			position: absolute;
 			width: 16em;
@@ -373,17 +392,41 @@ CSS Grid layout for modern browsers:
 			justify-content: flex-end;
 		}
 
-		/* post1 */
+		/* typography */
+		.post h2 {
+			padding: 0;
+			margin: calc(var(--textInterval) / 4) 0 0;
+		}
+		
+		.post h3 {
+			padding: 0;
+			margin: var(--textInterval) 0 var(--textInterval) 0;
+		}
+		
+		.post p {
+			padding: 0;
+			margin: 0 0 var(--textInterval) 0;
+		}
+
+		.arx .post h2,
+		.arx .post h3 {
+			line-height: 4em;
+			padding: 0;
+		}
+		.arx .post h3 {
+			padding-top: 1.4em;
+		}
 
 		.main-area{
 			padding: 2em 0;
 		}
-
+		
+		/* grid setup */
+		
 		.sciGrid {
 			display: grid;
 			grid-template-columns: repeat(6, 1fr);
 			grid-column-gap: 2em;
-			grid-row-gap: 2em;
 		}
 
 		.sciGrid img{
@@ -399,10 +442,32 @@ CSS Grid layout for modern browsers:
 
 		.sciSpanV3 { grid-row: 3 span; }
 		.sciSpanV2 { grid-row: 2 span; }
+
+
+		.sciSketch {
+			height: 100%;
+		}
+
+		/* ARX */
+		.sciVideo {
+			width: 100%;
+			max-width: 1280px;
+			max-height: 720px;
+		}
+		
+		.arx,
+		.arx p,
+		.arx h2,
+		.arx h3 {
+			margin: 0;
+			padding: 0;
+		}
+
 	}
 
 	@media screen and (min-width: 1440px) {
 		header img {
 			left: calc((100vw - 1280px) / 2);
 		}
+	}
 }
