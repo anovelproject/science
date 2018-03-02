@@ -271,6 +271,23 @@ header img{
 	margin-bottom: calc(var(--textInterval) / 2);
 }
 
+/* interactive sketch */
+.sciSketch {
+	background-color: #fff;
+	height: 100%;
+}
+.sketchPre {
+	cursor: pointer;
+}
+.sketchCap {
+	width: 100%;
+	text-align: center;
+	margin: -3em 0 0;
+	opacity: 0.4;
+	font-size: 0.8em;
+	pointer-events: none;
+}
+
 /* Colophon section */
 
 footer {
@@ -414,6 +431,11 @@ CSS Grid layout for modern browsers:
 			padding: 2em 0;
 		}
 
+		.sciSketch {
+			width: 100%;
+			height: calc((100vw - 10em) / 2);
+		}
+
 		/* grid setup */
 
 		.sciGrid {
@@ -434,24 +456,6 @@ CSS Grid layout for modern browsers:
 
 		.sciSpanV3 { grid-row: 3 span; }
 		.sciSpanV2 { grid-row: 2 span; }
-
-
-		/* interactive sketch */
-		.sciSketch {
-			background-color: #fff;
-			height: 100%;
-		}
-		.sketchPre {
-			cursor: pointer;
-		}
-		.sketchCap {
-			width: 100%;
-			text-align: center;
-			margin: -3em 0 0;
-			opacity: 0.4;
-			font-size: 0.8em;
-			pointer-events: none;
-		}
 
 		/* ARX */
 		.sciVideo {
@@ -493,6 +497,9 @@ CSS Grid layout for modern browsers:
 	@media screen and (min-width: 1440px) {
 		header img {
 			left: calc((100vw - 1280px) / 2);
+		}
+		.sciSketch {
+			height: calc((1280px - 2em) / 2);
 		}
 	}
 }
