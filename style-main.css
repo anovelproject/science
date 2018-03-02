@@ -466,6 +466,11 @@ CSS Grid layout for modern browsers:
 			padding-top: 1em;
 		}
 
+		.about h3 {
+			padding-bottom: 0;
+			margin-bottom: 0;
+		}
+
 		#aboutNovelfig {
 			padding-top: 2.8em;
 		}
