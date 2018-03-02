@@ -151,12 +151,14 @@ iframe {
 
 .sciSketch {
 	width: 100%;
-	height: auto;
-	min-height: 360px;
+	height: -webkit-calc(100vw - var(--phoneMargin) * 2);
+	height: calc(100vw - var(--phoneMargin) * 2);
 }
 
 .sciVideo {
+	width: -webkit-calc(100vw - var(--phoneMargin) * 2);
 	width: calc(100vw - var(--phoneMargin) * 2);
+	height: -webkit-calc((100vw - var(--phoneMargin) * 2) * 9 / 16);
 	height: calc((100vw - var(--phoneMargin) * 2) * 9 / 16);
 }
 
@@ -252,6 +254,7 @@ header img{
 .post h2 {
 	font-size: 1.6em;
 	font-weight: 600;
+	margin-bottom: -webkit-calc(var(--textInterval) / 2);
 	margin-bottom: calc(var(--textInterval) / 2);
 }
 
@@ -268,6 +271,7 @@ header img{
 
 .post p,
 .about .post p {
+	margin-bottom: -webkit-calc(var(--textInterval) / 2);
 	margin-bottom: calc(var(--textInterval) / 2);
 }
 
@@ -414,6 +418,7 @@ CSS Grid layout for modern browsers:
 		/* typography */
 		.post h2 {
 			padding: 0;
+			margin: -webkit-calc(var(--textInterval) / 4) 0 0;
 			margin: calc(var(--textInterval) / 4) 0 0;
 		}
 
@@ -433,6 +438,7 @@ CSS Grid layout for modern browsers:
 
 		.sciSketch {
 			width: 100%;
+			height: -webkit-calc((100vw - 10em) / 2);
 			height: calc((100vw - 10em) / 2);
 		}
 
@@ -496,9 +502,11 @@ CSS Grid layout for modern browsers:
 
 	@media screen and (min-width: 1440px) {
 		header img {
+			left: -webkit-calc((100vw - 1280px) / 2);
 			left: calc((100vw - 1280px) / 2);
 		}
 		.sciSketch {
+			height: -webkit-calc((1280px - 2em) / 2);
 			height: calc((1280px - 2em) / 2);
 		}
 	}
