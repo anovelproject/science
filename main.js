@@ -8,6 +8,18 @@ $(function(){
       $("#lockup2").css("opacity", alpha2);
   });
 
+  $(".sketchPre")
+    .hover(function() {
+      $(".sketchCap").css("opacity", 1);
+    })
+    .mouseleave(function() {
+      $(".sketchCap").css("opacity", 0.5);
+    });
+
+  $(".sketchPre").click(function() {
+      $(this).replaceWith( "<iframe class='sciSketch sciSpanH3' scrolling='no' src='https://zyyerin.github.io/365--/103/index.html'></iframe>" );
+  });
+
 });
 
 

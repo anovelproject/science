@@ -220,6 +220,7 @@ header img{
 	top: -0.5em;
 	padding: 1.5em 0 1em;
 	margin-bottom: var(--textInterval);
+	position: -webkit-sticky;
 	position: sticky;
 	border-bottom: 2px solid #000;
 	background: var(--sciColMain);
@@ -422,7 +423,6 @@ CSS Grid layout for modern browsers:
 		}
 
 		.sciGrid img{
-			/*padding: 0 0 4em;*/
 			margin: 0;
 		}
 
@@ -436,8 +436,21 @@ CSS Grid layout for modern browsers:
 		.sciSpanV2 { grid-row: 2 span; }
 
 
+		/* interactive sketch */
 		.sciSketch {
+			background-color: #fff;
 			height: 100%;
+		}
+		.sketchPre {
+			cursor: pointer;
+		}
+		.sketchCap {
+			width: 100%;
+			text-align: center;
+			margin: -3em 0 0;
+			opacity: 0.4;
+			font-size: 0.8em;
+			pointer-events: none;
 		}
 
 		/* ARX */
