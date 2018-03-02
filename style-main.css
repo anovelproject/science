@@ -228,6 +228,7 @@ header img{
 	position: sticky;
 	border-bottom: 2px solid #000;
 	background: var(--sciColMain);
+	outline: 2px solid var(--sciColMain);
 }
 
 #menu ul {
@@ -410,7 +411,7 @@ CSS Grid layout for modern browsers:
 		#menu {
 			margin: -4em 0 0;
 			padding: 2.5em 0 2em;
-			font-size: 0.8em;
+			font-size: 0.9em;
 		}
 
 		#menu ul{
