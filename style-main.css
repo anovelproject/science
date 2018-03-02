@@ -145,6 +145,11 @@ big {
 	font-size: 125%;
 }
 
+main {
+	width: 100%;
+	overflow: hidden;
+}
+
 iframe {
 	border: 0;
 }
