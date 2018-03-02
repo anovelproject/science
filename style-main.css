@@ -156,9 +156,10 @@ iframe {
 
 .sciSketch {
 	width: 100%;
+	min-height: 360px;
 	overflow: hidden;
-	height: -webkit-calc(100vw - var(--phoneMargin) * 2);
-	height: calc(100vw - var(--phoneMargin) * 2);
+	height: -webkit-calc(100vw - (var(--phoneMargin) * 2));
+	height: calc(100vw - (var(--phoneMargin) * 2));
 }
 
 .sciVideo {
