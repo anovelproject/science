@@ -315,6 +315,7 @@ footer {
 
 .footerHead img {
 	width: 30vw;
+	height: auto;
 	max-width: 120px;
 }
 
