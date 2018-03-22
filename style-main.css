@@ -163,9 +163,7 @@ iframe {
 }
 
 .sciVideo {
-	width: -webkit-calc(100vw - var(--phoneMargin) * 2);
 	width: calc(100vw - var(--phoneMargin) * 2);
-	height: -webkit-calc((100vw - var(--phoneMargin) * 2) * 9 / 16);
 	height: calc((100vw - var(--phoneMargin) * 2) * 9 / 16);
 }
 
@@ -479,6 +477,7 @@ CSS Grid layout for modern browsers:
 		/* ARX */
 		.sciVideo {
 			width: 100%;
+			height: calc((50vw - 4em) * 9 / 16);
 			max-width: 1280px;
 			max-height: 720px;
 		}
