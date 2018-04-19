@@ -61,3 +61,21 @@ Use this structure:
   </div><!-- .postMain -->
 </section><!-- .post -->
 ```
+
+# to define the size of any element
+
+Use the class name of:
+
+```
+    .sciSpanH6 { grid-column: 6 span; }
+    .sciSpanH5 { grid-column: 5 span; }
+    .sciSpanH4 { grid-column: 4 span; }
+    .sciSpanH3 { grid-column: 3 span; }
+    .sciSpanH2 { grid-column: 2 span; }
+
+    .sciSpanV3 { grid-row: 3 span; }
+    .sciSpanV2 { grid-row: 2 span; }
+
+```
+
+Additional grid options can be defined in the `css/main.css`.
