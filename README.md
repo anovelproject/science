@@ -4,7 +4,8 @@
 
 A simple post structure looks like this:
 
-`<section class="post">
+```
+<section class="post">
     <h2 class="postTitle">[ title of the post]</h2>
 
     <div class="postSection sciGrid">
@@ -21,24 +22,30 @@ A simple post structure looks like this:
 
     </div>
 
-</section>`
+</section>
+```
 
 To include an image:
 
-`<img class="sciSpanH3" src="images/post[ # of this post ]/[ file name ]" alt="[ description of the image ]">`
+```
+<img class="sciSpanH3" src="images/post[ # of this post ]/[ file name ]" alt="[ description of the image ]">
+```
 
 To include a sketch file:
 
-`<div class="sciSpanH3 sketchPre">
+```
+<div class="sciSpanH3 sketchPre">
   <img src="images/post[ # of this post ]/[ preview image ]" alt="[ description of the sketch ]">
   <div class="sketchCap">- click to explore -</div>
-</div>`
+</div>
+```
 
 # to make a new ARX experiment
 
 Use this structure:
 
-`<section class="post">
+```
+<section class="post">
     <div class="postMain">
       <div class="postSection sciGrid">
 
@@ -52,4 +59,5 @@ Use this structure:
           <iframe class="sciSpanH3 sciVideo" src="https://player.vimeo.com/video/000000000" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
   </div><!-- .postMain -->
-</section><!-- .post -->`
+</section><!-- .post -->
+```
