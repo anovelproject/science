@@ -75,7 +75,6 @@ Use the class name of:
 
     .sciSpanV3 { grid-row: 3 span; }
     .sciSpanV2 { grid-row: 2 span; }
-
 ```
 
 Additional grid options can be defined in the `css/main.css`.
